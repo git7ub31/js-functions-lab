@@ -151,12 +151,13 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 
 Complete the exercise in the space below:
 */
+//C means convert it to F and vice versa 
 
 const convertTemperature = (temp, conversion) =>{
 if(conversion = "C"){
-    return temp + 57.6;
+    return (temp - 32)*(5/9);
 }else if (conversion = "F"){
-    return temp - 32;
+    return (temp*(9/52))+32;
 }
 }
 
@@ -208,10 +209,20 @@ Complete the exercise in the space below:
 */
 
 const calculateGrade = (grade) => {
-    if(grade "A"){
-        return 
+    if(grade >= 90){
+        return "A";
+    } else if(grade >=80 && grade <=89){
+        return "B";
+    } else if(grade >=70 && grade <=79){
+        return "C";
+    }else if(grade >=60 && grade <=69){
+        return "D";
+    }else if(grade <60){
+        return "F";
     }
 }
 
-
 console.log('Exercise 10 Result:', calculateGrade(85));
+
+
+
